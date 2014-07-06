@@ -1,0 +1,32 @@
+{
+  "name": "footynews-api",
+  "version": "0.0.0",
+  "description": "Parse Football news feeds and provide JSON data",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mnmtanish/footynews-api.git"
+  },
+  "keywords": [
+    "football",
+    "news"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mnmtanish/footynews-api/issues"
+  },
+  "homepage": "https://github.com/mnmtanish/footynews-api",
+  "dependencies": {
+    "async": "0.9.x",
+    "cheerio": "0.17.x",
+    "debug": "1.0.x",
+    "mongodb": "1.4.x",
+    "request": "2.36.x",
+    "underscore": "1.6.x",
+    "yql": "0.4.x"
+  }
+}
