@@ -28,6 +28,7 @@
     "mongodb": "1.4.x",
     "request": "2.36.x",
     "underscore": "1.6.x",
+    "uuid": "1.4.x",
     "yql": "0.4.x"
   }
 }

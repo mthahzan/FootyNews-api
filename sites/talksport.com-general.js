@@ -2,9 +2,9 @@ var uuid = require('uuid');
 var cheerio = require('cheerio');
 
 var site = {
-  name: 'talksport.com-premier-league',
-  category: 'Premier League',
-  feedUrl: 'http://talksport.com/rss/football/premier-league/feed',
+  name: 'talksport.com-general',
+  category: 'General',
+  feedUrl: 'http://talksport.com/rss/sports-news/football/feed',
   baseUrl: 'http://talksport.com/'
 };
 

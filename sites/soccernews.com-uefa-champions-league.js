@@ -2,10 +2,10 @@ var uuid = require('uuid');
 var cheerio = require('cheerio');
 
 var site = {
-  name: 'talksport.com-premier-league',
-  category: 'Premier League',
-  feedUrl: 'http://talksport.com/rss/football/premier-league/feed',
-  baseUrl: 'http://talksport.com/'
+  name: 'soccernews.com-uefa-champions-league',
+  category: 'Champions League',
+  feedUrl: 'http://www.soccernews.com/category/uefa-champions-league/feed/',
+  baseUrl: 'http://www.soccernews.com/'
 };
 
 site.formatFeed = function (feed) {
@@ -32,7 +32,7 @@ site.formatFeed = function (feed) {
 site.parser = function (article, html, callback) {
   try {
     var $ = cheerio.load(html);
-    $('div.field-name-body').filter(function () {
+    $('div.entry').filter(function () {
       article.html = $(this).first().text();
       callback(null);
     });
