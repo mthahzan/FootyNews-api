@@ -7,13 +7,17 @@ var site = {
   baseUrl: 'http://blog.thanish.me/'
 };
 
-site.parser = function (html, callback) {
-  var $ = cheerio.load(html);
-  $('section.post-content').filter(function () {
-    var data = $(this);
-    var html = data.first().html();
-    callback(null, html);
-  });
+site.parser = function (article, html, callback) {
+  try {
+    var $ = cheerio.load(html);
+    $('section.post-content').filter(function () {
+      article.html = $(this).first().text();
+      callback(null);
+    });
+  } catch(e) {
+    article.html = 'ERROR PARSING ARTICLE';
+    callback(e);
+  }
 }
 
 module.exports = site;
