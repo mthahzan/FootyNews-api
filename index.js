@@ -24,8 +24,11 @@ MongoClient.connect(MONGO_URL, function(err, db) {
         }, FETCH_INTERVAL);
 
         function afterRun (err) {
-          // TODO Handle Errors
-          log('Successfully Updated', name);
+          if(err) {
+            console.error(err);
+          } else {
+            log('Successfully Updated', name);
+          }
         }
       });
     });
