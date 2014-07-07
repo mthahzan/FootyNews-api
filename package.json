@@ -24,6 +24,7 @@
     "async": "0.9.x",
     "cheerio": "0.17.x",
     "debug": "1.0.x",
+    "hapi": "^6.0.2",
     "mongodb": "1.4.x",
     "request": "2.36.x",
     "underscore": "1.6.x",
