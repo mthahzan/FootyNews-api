@@ -37,7 +37,7 @@ MongoClient.connect(MONGO_URL, function(err, db) {
   var server = new Hapi.Server('localhost', 8000);
 
   server.route({
-    method: 'GET',
+    method: 'POST',
     path: '/api/v1/getHeadlines',
     handler: function (request, reply) {
       Articles.find({}, {fields: {html: 0}}).toArray(function (err, articles) {

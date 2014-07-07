@@ -34,8 +34,11 @@ site.parser = function (article, html, callback) {
     var $ = cheerio.load(html);
     $('div.field-name-body').filter(function () {
       article.html = $(this).first().text();
-      callback(null);
+      $('div.field-name-field-image img').filter(function () {
+        article.image = $(this).first().attr('src');
+      });
     });
+    callback(null);
   } catch(e) {
     article.html = 'ERROR PARSING ARTICLE';
     callback(e);
