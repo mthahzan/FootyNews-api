@@ -1,3 +1,3 @@
 module.exports = {
-  'blog.thanish.me': require('./blog.thanish.me')
+  'talksport.com-premier-league': require('./talksport.com-premier-league')
 };
