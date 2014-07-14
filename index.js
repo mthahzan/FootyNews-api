@@ -5,8 +5,8 @@ var MongoClient = require('mongodb').MongoClient;
 var RSSReader = require('./lib/rss-reader');
 var FeedSites = require('./sites/');
 
-var MONGO_URL = process.env.MONGO_URL;
-var SERVER_PORT = process.env.SERVER_PORT;
+var MONGO_URL = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/footy';
+var SERVER_PORT = process.env.SERVER_PORT || 80;
 var FETCH_INTERVAL = 1000*60*3;
 
 
@@ -35,7 +35,7 @@ MongoClient.connect(MONGO_URL, function(err, db) {
     });
   });
 
-  var server = new Hapi.Server('localhost', SERVER_PORT);
+  var server = new Hapi.Server(SERVER_PORT);
 
   server.route({
     method: 'POST',
