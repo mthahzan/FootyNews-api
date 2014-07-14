@@ -6,6 +6,7 @@ var RSSReader = require('./lib/rss-reader');
 var FeedSites = require('./sites/');
 
 var MONGO_URL = process.env.MONGO_URL;
+var SERVER_PORT = process.env.SERVER_PORT;
 var FETCH_INTERVAL = 1000*60*3;
 
 
@@ -34,7 +35,7 @@ MongoClient.connect(MONGO_URL, function(err, db) {
     });
   });
 
-  var server = new Hapi.Server('localhost', 8000);
+  var server = new Hapi.Server('localhost', SERVER_PORT);
 
   server.route({
     method: 'POST',
