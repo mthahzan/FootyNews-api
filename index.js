@@ -6,7 +6,7 @@ var RSSReader = require('./lib/rss-reader');
 var FeedSites = require('./sites/');
 
 var MONGO_URL = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/footy';
-var SERVER_PORT = process.env.SERVER_PORT || 80;
+var SERVER_PORT = process.env.PORT || 80;
 var FETCH_INTERVAL = 1000*60*3;
 
 
