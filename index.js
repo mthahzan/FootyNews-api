@@ -63,7 +63,7 @@ MongoClient.connect(MONGO_URL, function(err, db) {
             news_id: article._id,
             headline: article.title,
             league: article.category,
-            body: article.html,
+            body: article.html + "\n\n\n\n\n\n\n\n\n\n",
             source: article.link,
             img_url: article.image
           });
